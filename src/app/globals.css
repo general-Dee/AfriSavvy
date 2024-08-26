@@ -18,16 +18,48 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.container{
+  @apply md:max-w-[1024px] max-w-[600px] m-auto
+}
+
+.logo{
+  @apply font-black text-2xl cursor-pointer
+}
+
+.customLogoText{
+  @apply text-green-700
+}
+
+.cart-icon {
+  @apply relative text-[25px]
+}
+
+.cart-iten-qty{
+  @apply absolute text-[12px] top-0 right-[-5px] bg-red-500 w-[18px] rounded-3xl text-center text-white font-bold
+}
+
+.heroSection {
+  @apply w-full md:h-[450px] h-[200px] flex items-center
+}
+
+.heroContainer {
+  @apply h-full md:max-w-[1024px] max-w-[600px] m-auto flex justify-center items-center relative px-4 md:px-0
+}
+
+.heroBanner {
+  @apply absolute md:mt-[300px] mt-[100px]
 }
